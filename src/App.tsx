@@ -11,7 +11,9 @@ function App() {
 
 			{/* result list */}
 			<div>
-				<h2 className={styles.heading2}>Results: <span className={styles.emp}>10</span>mail(s)</h2>
+				<h2 className={styles.heading2}>
+					Results: <span className={styles.emp}>10</span>mail(s)
+				</h2>
 				{/* header */}
 				<ul className={styles.flexRow}>
 					<li>From</li>
@@ -31,7 +33,9 @@ function App() {
 										<p>zzz.zzz@example </p>
 									</div>
 								</div>
-								<p style={{ paddingRight: "1.5rem" }}>[HR-887] Notice of official announcement</p>
+								<p className={styles.subject}>
+									[HR-887] Notice of official announcement
+								</p>
 								<img src={iconClip} alt="" className={styles.iconClip} />
 							</div>
 							<p>0:20</p>

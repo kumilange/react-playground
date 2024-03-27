@@ -35,6 +35,10 @@ $_BREAKPOINT: 760px;
 	flex-direction: row;
 }
 
+.subject {
+	padding-right: 1.5rem;
+}
+
 @media only screen and (width >= $_BREAKPOINT) {
 	.iconMailSp {
 		display: none;
