@@ -1,0 +1,53 @@
+$_BREAKPOINT: 760px;
+
+.heading1 {
+	display: none;
+}
+
+.heading2 {
+	font-size: 1rem;
+	color: #373535;
+}
+
+.emp {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.flexRow {
+	display: flex;
+	flex-direction: row;
+}
+
+.position {
+	position: relative;
+}
+
+.iconClip {
+	width: 20px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.mailContent {
+	display: flex;
+	flex-direction: row;
+}
+
+@media only screen and (width >= $_BREAKPOINT) {
+	.iconMailSp {
+		display: none;
+	}
+}
+
+@media only screen and (width < $_BREAKPOINT) {
+	.mailContent {
+		flex-direction: column;
+	}
+
+	.iconMailSp {
+		display: block;
+		width: 20px;
+	}
+}

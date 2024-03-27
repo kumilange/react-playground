@@ -65,3 +65,8 @@ h6 {
 body {
 	font-family: Plex, sans-serif;
 }
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
