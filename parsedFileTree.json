@@ -1,0 +1,91 @@
+{
+	"name": "root",
+	"path": "",
+	"isFolder": true,
+	"children": [
+		{
+			"name": "app",
+			"path": "app",
+			"isFolder": true,
+			"children": [
+				{
+					"name": "data",
+					"path": "app/data",
+					"isFolder": true,
+					"children": [
+						{
+							"name": "clearanceWidgets.js",
+							"path": "app/data/clearanceWidgets.js",
+							"isFolder": false,
+							"children": [],
+							"contents": "export default [\n  { name: 'plonches', price: 839 },\n  { name: 'chopfle', price: 7743 },\n  { name: 'kazkabo', price: 9133 }\n]"
+						},
+						{
+							"name": "discontinuedWidgets.js",
+							"path": "app/data/discontinuedWidgets.js",
+							"isFolder": false,
+							"children": [],
+							"contents": "export default [\n  { name: 'neewumps', price: 138 },\n  { name: 'snarcap', price: 5873 },\n  { name: 'topwolly', price: 83 }\n]"
+						},
+						{
+							"name": "featuredWidgets.js",
+							"path": "app/data/featuredWidgets.js",
+							"isFolder": false,
+							"children": [],
+							"contents": "export default [\n  { name: 'spadoink', price: 777 },\n  { name: 'kafloof', price: 1326 },\n  { name: 'sweezil', price: 966 }\n]"
+						}
+					]
+				},
+				{
+					"name": "src",
+					"path": "app/src",
+					"isFolder": true,
+					"children": [
+						{
+							"name": "WidgetList",
+							"path": "app/src/WidgetList",
+							"isFolder": true,
+							"children": [
+								{
+									"name": "Widget.tsx",
+									"path": "app/src/WidgetList/Widget.tsx",
+									"isFolder": false,
+									"children": [],
+									"contents": "import React from 'react'\n\nexport const Widget = ({ widget }) => {\n  return (\n    <div>\n      <b>Widget: {widget.name}</b>\n      <span>${widget.price / 1000.0}</span>\n    </div>\n  )\n}"
+								},
+								{
+									"name": "WidgetList.tsx",
+									"path": "app/src/WidgetList/WidgetList.tsx",
+									"isFolder": false,
+									"children": [],
+									"contents": "import React from 'react'\nimport { Widget } from './Widget'\n\nexport const WidgetList = ({ widgets }) => {\n  return (\n    <ul>\n      {widgets.map((widget) => {\n        return (\n          <li key={widget.name}>\n            <Widget widget={widget} />\n          </li>\n        )\n      })}\n    </ul>\n  )\n}"
+								}
+							]
+						},
+						{
+							"name": "App.tsx",
+							"path": "app/src/App.tsx",
+							"isFolder": false,
+							"children": [],
+							"contents": "import React from 'react'\nimport { WidgetList } from './WidgetList/WidgetList'\nimport featuredWidgets from '../data/featuredWidgets'\nimport clearanceWidgets from '../data/clearanceWidgets'\nimport discontinuedWidgets from '../data/discontinuedWidgets'\n\nconst widgets = featuredWidgets + clearanceWidgets + discontinuedWidgets\n\nexport const App = () => {\n  return (\n    <div>\n      <h1>Widgets R Us</h1>\n      <WidgetList widgets={widgets} />\n    </div>\n  )\n}"
+						}
+					]
+				},
+				{
+					"name": "index.html",
+					"path": "app/index.html",
+					"isFolder": false,
+					"children": [],
+					"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Roboto\">\n    <title>React | CoderPad</title>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n    <script type=\"module\" src=\"/src/App.tsx\"></script>\n    <script type=\"module\" src=\"/style.css\"></script>\n  </body>\n</html>"
+				},
+				{
+					"name": "style.css",
+					"path": "app/style.css",
+					"isFolder": false,
+					"children": [],
+					"contents": "body, html {\n  height: 100%;\n  width: 100%;\n  font-family: comic-sans;\n  font-size: 1rem;\n  background: limegreen;\n}"
+				}
+			]
+		}
+	]
+}
