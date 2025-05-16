@@ -1,11 +1,9 @@
-import React from 'react';
-import './App.css';
-import { ImageGallery } from './components';
+import { ImageGallery, FileExplorer } from './components';
 
 function App() {
 	return (
 		<div className="container">
-			<ImageGallery />
+			<FileExplorer />
 		</div>
 	);
 }
