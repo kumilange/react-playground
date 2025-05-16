@@ -1,0 +1,12 @@
+.image-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 20px;
+}
+
+.loading {
+	text-align: center;
+	padding: 20px;
+	font-size: 18px;
+	color: #666;
+}

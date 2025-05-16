@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Workspace } from './componentsTemp/FileExplorer/Workspace/Workspace';
+import { FileExplorer } from './components';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>
-		<Workspace />
+		<FileExplorer />
 	</React.StrictMode>,
 );
