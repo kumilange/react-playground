@@ -5,7 +5,9 @@
 		"jest.config.ts",
 		"jest.setup.ts",
 		"src/sum.js",
-		"src/sum.test.js"
+		"src/sum.test.js",
+		"parseFile.js",
+		"src/Workspace/defaultFiles.js"
 	],
 	"compilerOptions": {
 		"lib": ["DOM", "DOM.Iterable", "ES2022"],
