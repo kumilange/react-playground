@@ -1,11 +1,10 @@
 import React from 'react';
-import ImageGallery from './components/ImageGallery';
 import './App.css';
+import { ImageGallery } from './components';
 
 function App() {
 	return (
 		<div className="container">
-			<h1>Infinite Scroll Image Gallery</h1>
 			<ImageGallery />
 		</div>
 	);
