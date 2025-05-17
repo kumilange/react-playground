@@ -1,9 +1,18 @@
-import { ImageGallery, FileExplorer } from './components';
+import { Suspense } from 'react';
+import {
+	UserTable,
+	CourseGallery,
+	CourseList,
+	ImageGallery,
+	FileExplorer,
+} from './components';
 
 function App() {
 	return (
 		<div className="container">
-			<FileExplorer />
+			<Suspense fallback={<p>Loading courses...</p>}>
+				<UserTable />
+			</Suspense>
 		</div>
 	);
 }

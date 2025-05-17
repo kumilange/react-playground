@@ -9,7 +9,6 @@ export const FilePane: React.FC = () => {
 
 	// Build nested file tree structure
 	const fileTree = useMemo(() => buildFileTree(files), [files]);
-	console.log(fileTree);
 
 	return (
 		<Box
