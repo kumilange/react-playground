@@ -1,5 +1,10 @@
 import { Suspense } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {
+	// UserPage,
+	// Main,
+	CoursePage,
+	Home,
 	UserTable,
 	CourseGallery,
 	CourseList,
@@ -9,11 +14,12 @@ import {
 
 function App() {
 	return (
-		<div className="container">
-			<Suspense fallback={<p>Loading courses...</p>}>
-				<UserTable />
-			</Suspense>
-		</div>
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/courses/:courseId" element={<CoursePage />} />
+			</Routes>
+		</BrowserRouter>
 	);
 }
 
